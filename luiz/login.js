@@ -7,7 +7,7 @@ function clicar () {
     if (log > 4 && senha  >4 ) {
         
         document.getElementById(res).innerHTML='caco'
-
+          
         
     }
     
