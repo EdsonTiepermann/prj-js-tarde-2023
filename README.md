@@ -1,6 +1,7 @@
 # prj-js-tarde-2023
 Repostório do projeto de JavaScript 2023
 
+Realizar o fork e o clone do repositório  prj-js-tarde-2023
 
 -Primeira parte
 
