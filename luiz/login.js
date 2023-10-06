@@ -1,20 +1,65 @@
-var log = document.getElementById('login').value
-var senha = document.getElementById('senha').value
-var botao = document.getElementById('clicar')
-var res = document.getElementById('res')
-
-function clicar () {
-    if (log > 4 && senha  >4 ) {
+var botao = document.querySelector('#clicar')
+function clica () {
+    var log = document.getElementById('login').value
+    var senha = document.getElementById('senha').value
+   
+        if (log =='admin' && senha=="admin" ) {
+    
+            // document.getElementById('res').innerHTML='caco'
+            location.href='filme.html'
+        //  alert('bat')
+              
+            
+        }
+         else {
+            // document.getElementById('res').innerHTML = 'nada'
+            window.alert('Senha incorreta')
+        }
         
-        document.getElementById(res).innerHTML='caco'
+        
+
+    }
+     botao.addEventListener('click',clica )
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function clicar () {
+// var log = document.getElementById('login').value
+// var senha = document.getElementById('senha').value
+// var nome = 'luiz'
+// var nome2 = 'maria'
+//     if (log ==nome2 && senha==nome ) {
+        
+//         document.getElementById('res').value='caco'
           
         
-    }
+//     }
+//     else{
+//         document.getElementById('res').value = 'nada'
+//     }
     
-}
+// }
 
 
-botao.addEventListener('click', clicar)
+// document.getElementById('clicar').addEventListener('click', clicar)
 
 
 
