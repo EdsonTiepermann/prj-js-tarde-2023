@@ -1,65 +1,53 @@
-var botao = document.querySelector('#clicar')
-function clica () {
-    var log = document.getElementById('login').value
-    var senha = document.getElementById('senha').value
-   
-        if (log =='admin' && senha=="admin" ) {
-    
-            // document.getElementById('res').innerHTML='caco'
-            location.href='filme.html'
-        //  alert('bat')
-              
-            
-        }
-         else {
-            // document.getElementById('res').innerHTML = 'nada'
-            window.alert('Senha incorreta')
-        }
-        
-        
 
-    }
-     botao.addEventListener('click',clica )
-    
+// function clica () {
+//     var log = document.getElementById('login').value
+//     var senha = document.getElementById('senha').value
+
+//         if (log =='admin' && senha=="admin" ){
+
+//             location.href="filme.html"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function clicar () {
-// var log = document.getElementById('login').value
-// var senha = document.getElementById('senha').value
-// var nome = 'luiz'
-// var nome2 = 'maria'
-//     if (log ==nome2 && senha==nome ) {
-        
-//         document.getElementById('res').value='caco'
-          
-        
-//     }
-//     else{
-//         document.getElementById('res').value = 'nada'
-//     }
-    
+//         }
+//          else {
+//             // document.getElementById('res').innerHTML = 'nada'
+//             alert('Senha incorreta')
+//         }
 // }
 
 
-// document.getElementById('clicar').addEventListener('click', clicar)
+//     document.getElementById('clicar').addEventListener('click', clica)
 
+var log = document.getElementById('login')
+var senha = document.getElementById('senha')
+let botao = document.getElementById('clicar')
 
+botao.addEventListener('click', function(e) {
+    // let search = log.value 
+    // let search2 = senha.value
 
+    const options = {
+        method: 'GET',
+        mode: 'cors',
+        cache: 'default'
+    }
+
+    // fetch(`luiz/ws/loginJson.json=${search}${search2}`, options)
+    // fetch(`luiz/ws/loginJson.json`, options)
+    
+    fetch('.../ws/loginJson.json', options)
+
+        .then(function (response) {
+            response.json()
+
+                .then(function (data) {
+                    console.log(data);
+                });
+
+        })
+
+        .catch(function (e) {
+            console.log('Error:' + e.message);
+        })
+
+})
