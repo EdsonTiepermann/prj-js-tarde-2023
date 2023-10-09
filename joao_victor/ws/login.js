@@ -8,25 +8,33 @@ function cadastrar() {
         return;
     }
 
-    fetch(`loginJson.json`)
     const options = {
-        method:'get',
-        mode:'cors',
-        cache:'default',
+        method: 'get',
+        mode: 'cors',
+        cache: 'default'
     }
+
+    fetch(`loginJson.json`, options)
+
         .then(function (response) {
-            if (!response.ok) {
-                throw new Error("Erro na requisição.");
-            }
-            return response.json();
+            response.json()
+                .then(function (data) {
+                    console.log(data)
+                    for (let index = 0; index < data.length; index++) {
+                        if (nome == data[index].login && senha == data[index].senha) {
+                            alert ('login bem sucedido')
+                            window.open (`pgprincipal.html?nomeUsu=${nome}&senha=${senha}`)
+                        }
+                        else {
+                            alert ('login ou senha incorretos')
+                        }
+                        
+                    }
+
+                })
         })
-        .then(function (data) {
-            if (data.login == cadastrar && data.senha == senha) {
-                alert('login bem sucedido')
-            } else {
-                alert("Login ou senha incorretos. Tente novamente.");
-            }
-        })
+
+
         .catch(function (error) {
             console.error("Erro:", error);
             alert("Erro ao processar a requisição.");
