@@ -27,7 +27,7 @@ botao.addEventListener('click', function(e) {
     // let search2 = senha.value
 
     const options = {
-        method: 'GET',
+        method: 'get',
         mode: 'cors',
         cache: 'default'
     }
@@ -35,7 +35,7 @@ botao.addEventListener('click', function(e) {
     // fetch(`luiz/ws/loginJson.json=${search}${search2}`, options)
     // fetch(`luiz/ws/loginJson.json`, options)
     
-    fetch('.../ws/loginJson.json', options)
+    fetch(`ws/arquivoJson.json`,options)
 
         .then(function (response) {
             response.json()
