@@ -18,9 +18,9 @@
 
 //     document.getElementById('clicar').addEventListener('click', clica)
 
-var log = document.getElementById('login')
-var senha = document.getElementById('senha')
-let botao = document.getElementById('clicar')
+var log = document.querySelector('#login')
+var senha = document.querySelector('#senha')
+let botao = document.querySelector('#btn')
 
 botao.addEventListener('click', function(e) {
     // let search = log.value 
@@ -41,8 +41,19 @@ botao.addEventListener('click', function(e) {
             response.json()
 
                 .then(function (data) {
-                    console.log(data);
-                });
+                    // console.log(data)
+                for (let i = 0; i < data.length; i++) {
+                  let senhas= console.log(data[i].senha)
+                    if (log == senhas  && senha == senhas) {
+                        
+                    } else{
+                        alert('Funcionando')
+                    }
+                        
+                    
+                    
+                }
+              });
 
         })
 
@@ -51,3 +62,8 @@ botao.addEventListener('click', function(e) {
         })
 
 })
+
+
+
+
+// window.open(`./filmes.html?nomeUsu=$VARIAVELUSU &senha`)
