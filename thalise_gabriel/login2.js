@@ -8,10 +8,10 @@ botao.addEventListener('click', function (e) {
     const options = {
         method: 'GET',
         mode: 'cors',
-        cache: 'default'
+        cache: 'default',
     }
 
-    fetch(`ws/senhaJson.json`, options)
+    fetch('ws/senhaJson.json', options)
 
         .then(function (response) {
             response.json()
