@@ -18,16 +18,16 @@
 
 //     document.getElementById('clicar').addEventListener('click', clica)
 
-var log = document.getElementById('login')
-var senha = document.getElementById('senha')
-let botao = document.getElementById('clicar')
+var log = document.querySelector('#login')
+var senha = document.querySelector('#senha')
+let botao = document.querySelector('#btn')
 
 botao.addEventListener('click', function(e) {
     // let search = log.value 
     // let search2 = senha.value
 
     const options = {
-        method: 'GET',
+        method: 'get',
         mode: 'cors',
         cache: 'default'
     }
@@ -35,14 +35,25 @@ botao.addEventListener('click', function(e) {
     // fetch(`luiz/ws/loginJson.json=${search}${search2}`, options)
     // fetch(`luiz/ws/loginJson.json`, options)
     
-    fetch('.../ws/loginJson.json', options)
+    fetch(`ws/arquivoJson.json`,options)
 
         .then(function (response) {
             response.json()
 
                 .then(function (data) {
-                    console.log(data);
-                });
+                    // console.log(data)
+                for (let i = 0; i < data.length; i++) {
+                  let senhas= console.log(data[i].senha)
+                    if (log == senhas  && senha == senhas) {
+                        
+                    } else{
+                        alert('Funcionando')
+                    }
+                        
+                    
+                    
+                }
+              });
 
         })
 
@@ -51,3 +62,8 @@ botao.addEventListener('click', function(e) {
         })
 
 })
+
+
+
+
+// window.open(`./filmes.html?nomeUsu=$VARIAVELUSU &senha`)
