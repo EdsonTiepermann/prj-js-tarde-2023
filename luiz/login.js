@@ -1,41 +1,21 @@
 
-// function clica () {
-//     var log = document.getElementById('login').value
-//     var senha = document.getElementById('senha').value
-
-//         if (log =='admin' && senha=="admin" ){
-
-//             location.href="filme.html"
-
-
-//         }
-//          else {
-//             // document.getElementById('res').innerHTML = 'nada'
-//             alert('Senha incorreta')
-//         }
-// }
-
-
-//     document.getElementById('clicar').addEventListener('click', clica)
-
-var log = document.querySelector('#login')
-var senha = document.querySelector('#senha')
+let log = document.getElementById('login')
+let senhas = document.getElementById('senha')
 let botao = document.querySelector('#btn')
 
 botao.addEventListener('click', function(e) {
-    // let search = log.value 
-    // let search2 = senha.value
+    let search = log.value 
+    let search2 = senha.value
+
+
 
     const options = {
         method: 'get',
         mode: 'cors',
         cache: 'default'
     }
-
-    // fetch(`luiz/ws/loginJson.json=${search}${search2}`, options)
-    // fetch(`luiz/ws/loginJson.json`, options)
     
-    fetch(`ws/arquivoJson.json`,options)
+    fetch(`ws/loginJson.json`, options)
 
         .then(function (response) {
             response.json()
@@ -43,12 +23,16 @@ botao.addEventListener('click', function(e) {
                 .then(function (data) {
                     // console.log(data)
                 for (let i = 0; i < data.length; i++) {
-                  let senhas= console.log(data[i].senha)
-                    if (log == senhas  && senha == senhas) {
-                        
-                    } else{
-                        alert('Funcionando')
+                    let valogin = data[i].login;
+                    let vasenha = data[i].senha;
+                    // console.log(data[i].login)
+                    if (search== valogin && search2 == vasenha  ){
+                        alert('ok')
                     }
+                    else{
+                        alert('deu erro')
+                    }
+
                         
                     
                     
@@ -60,8 +44,8 @@ botao.addEventListener('click', function(e) {
         .catch(function (e) {
             console.log('Error:' + e.message);
         })
-
-})
+    }
+)
 
 
 
