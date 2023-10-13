@@ -18,8 +18,8 @@
 
 //     document.getElementById('clicar').addEventListener('click', clica)
 
-var log = document.querySelector('#login')
-var senha = document.querySelector('#senha')
+let log = document.querySelector('#login')
+let senhas = document.querySelector('#senha')
 let botao = document.querySelector('#btn')
 
 botao.addEventListener('click', function(e) {
@@ -31,11 +31,8 @@ botao.addEventListener('click', function(e) {
         mode: 'cors',
         cache: 'default'
     }
-
-    // fetch(`luiz/ws/loginJson.json=${search}${search2}`, options)
-    // fetch(`luiz/ws/loginJson.json`, options)
     
-    fetch(`ws/arquivoJson.json`,options)
+    fetch(`ws/arquivoJson.json`, options)
 
         .then(function (response) {
             response.json()
@@ -43,12 +40,14 @@ botao.addEventListener('click', function(e) {
                 .then(function (data) {
                     // console.log(data)
                 for (let i = 0; i < data.length; i++) {
-                  let senhas= console.log(data[i].senha)
-                    if (log == senhas  && senha == senhas) {
-                        
-                    } else{
-                        alert('Funcionando')
+                    // console.log(data[i].login)
+                    if (log == data[i].login && senhas == data[i].senha  ){
+                        alert('ok')
                     }
+                    else{
+                        alert('erro')
+                    }
+
                         
                     
                     
@@ -60,8 +59,8 @@ botao.addEventListener('click', function(e) {
         .catch(function (e) {
             console.log('Error:' + e.message);
         })
-
-})
+    }
+)
 
 
 
