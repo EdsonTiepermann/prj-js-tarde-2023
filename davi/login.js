@@ -4,15 +4,18 @@ var senha = document.querySelector('#senha')
 const submit = document.querySelector('#botao')
 
 submit.addEventListener('click', function(e) {
+    e.preventDefault()
+
     //alert("texto qualquer")
     const options ={
         method: 'get',
         mode: 'cors',
         cache: 'default'
+        
     } 
-    fetch(`ws/loginJson.json/json/`, options)
-
+    fetch(`ws/loginJson.json`, options)
     .then(function(response) {
+        
         response.json()
 
         .then(function(data) {
