@@ -1,0 +1,61 @@
+body {
+  background-color: black;
+  color: grey;
+}
+
+#box {
+  text-align: center;
+  display: flex;
+  padding: 3% 10% 3% 10%;
+  margin: 35px 50px 35px 50px;
+}
+
+button {
+  float: left;
+}
+
+#Year {
+  float: inline-start;
+}
+
+#Runtime {
+  float: inline-start;
+}
+
+#Title {
+  font-size: 60px;
+  color: white;
+}
+
+ul li {
+  list-style: none;
+  text-align: left;
+  margin-top: 10px;
+  margin-right: 20px;
+  display: flex;
+}
+
+#Poster {
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  margin: 3px 50px 3px 50px;
+}
+
+@media only screen and (max-width: 750px) {
+  img {
+    width: 180px;
+    height: 280px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #Poster {
+    display: none;
+    flex-wrap: initial;
+    border: none;
+  }
+}
