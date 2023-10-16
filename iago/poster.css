@@ -12,6 +12,9 @@ body {
 
 button {
   float: left;
+  cursor: pointer;
+  height: 35px;
+  width: 100px;
 }
 
 #Year {
