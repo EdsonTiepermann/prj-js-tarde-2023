@@ -22,6 +22,7 @@ const showData = function (result) {
 
 botao.addEventListener('click', function(e) {
     let search = buscarfilme.value 
+    location.href='filme.html'
 
 
 
@@ -32,21 +33,14 @@ botao.addEventListener('click', function(e) {
     }
     
     fetch(`http://www.omdbapi.com/?s=${search}&apikey=f450f23a`, options)
-    
 
         .then(function (response) {
             response.json()
               
                 .then(function (data) {
-
+                
                     console.log(data)
-                        showData(data.result)
-                    if (search == data) {
-                        
-                    }
-                  
-
-            
+                        // showData(data.result)
 
                         
                     
