@@ -27,7 +27,7 @@ botao.addEventListener('click', function(e) {
                     let vasenha = data[i].senha;
                     // console.log(data[i].login)
                     if (search== valogin && search2 == vasenha  ){
-                        alert('ok')
+                        location.href = 'buscafilme.html'
                     }
                     else{
                         alert('deu erro')
