@@ -16,7 +16,7 @@ botao.addEventListener('click', function(e) {
         .then(function (response) {
             response.json()
 
-                .then(function () {
+                .then(function (data){
                     console.log(data)
 
             
