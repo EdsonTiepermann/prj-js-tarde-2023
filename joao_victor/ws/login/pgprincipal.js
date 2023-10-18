@@ -1,8 +1,8 @@
 let uparams = new URLSearchParams(window.location.search);
 let nomeUsuario = uparams.get('nomeUsu');
 let nomeUsuarioSpan = document.getElementById("nomeUsuario");
-nomeUsuarioSpan.textContent = nomeUsuario;
-
+nomeUsuarioSpan.textContent = nomeUsuario
+;
 
 function busca() {
     const filme = document.getElementById("titulo").value;
@@ -21,7 +21,16 @@ function busca() {
         .then(function (response) {
             response.json()
                 .then(function (data) {
-                    console.log(data.Search[0].Poster)
+                    console.log(data)
+                    for (let i = 0; i < data.totalResults; i++) {
+                        let imagemURL = data.Search[i].Poster
+                    let imagem = document.createElement("img")
+                    imagem.src = imagemURL
+                    imagem.id = i
+                    document.getElementById("posterdiv").appendChild(imagem)
+                        
+                    }
+                    
                 })
         })
 
