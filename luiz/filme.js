@@ -1,9 +1,8 @@
-let botao = document.getElementById('btnfilmes')
-
+let botao = document.querySelector('#btn')
+let ver = document.querySelector('#poster')
 
 botao.addEventListener('click', function(e) {
-    let search = botao.value 
-
+ let search= ver.value
 
 
     const options = {
@@ -11,16 +10,16 @@ botao.addEventListener('click', function(e) {
         mode: 'cors',
         cache: 'default'
     }
-    
-    fetch(`http://www.omdbapi.com/?t=${search}&apikey=f450f23a`, options)
+    fetch(`http://img.omdbapi.com/?apikey=[f450f23a]&${search}`)
+    // fetch(`http://www.omdbapi.com/?t=${search}&apikey=f450f23a`, options)
 
         .then(function (response) {
             response.json()
 
-                .then(function () {
+                .then(function (data){
+                    console.log(data)
 
             
-
                         
                     
                     
@@ -52,4 +51,3 @@ botao.addEventListener('click', function(e) {
 
 
 
-fetch(`http://www.omdbapi.com/?apikey=[c82a5046]&`)
