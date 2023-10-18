@@ -9,7 +9,6 @@ body {
 }
 
 input {
-  /* border: rgb(145, 21, 21) solid 5px; */
   border: white solid 3px;
   width: 60%;
   border-radius: 5px;
@@ -17,12 +16,12 @@ input {
 }
 
 #buscar {
-  /* border: rgb(145, 21, 21) solid 5px; */
   border: white solid 8px;
   width: 80px;
   height: 36px;
   border-radius: 5px;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 #imagem {
@@ -30,15 +29,8 @@ input {
   height: 200px;
   border-radius: 50%;
   padding: 5px;
-  /* transition: width 1s;
-    transition-duration: 0s; */
+  cursor: pointer;
 }
-
-/* #imagem:hover {
-    width: 430px;
-    height: 230px;
-
-} */
 
 h1 {
   padding: 1px;
@@ -55,14 +47,6 @@ footer {
 #object {
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: 13% 13% 13% 13% 13% 13% 13% 13%; */
-  /* border: solid red 5px; */
-  /* background-color: grey; */
-  /* width: 60%; */
-  /* text-align: center; */
-  /* justify-items: auto; */
-  /* justify-tracks: center; */
-  /* align-items: center; */
   justify-content: center;
   margin-left: 9%;
   margin-right: 9%;
@@ -70,17 +54,11 @@ footer {
 
 img {
   max-width: 200px;
-  /* height: 280px; */
-  /* justify-content: center; */
   padding: 10px 10px;
   border-radius: 20px;
-  /* border: red solid 3px; */
-  /* flex-wrap: wrap; */
-  /* border: red solid 3px; */
 }
 
 img:hover {
-  /* width: 300px; */
   opacity: 0.2;
   transition: 1s;
   cursor: pointer;
