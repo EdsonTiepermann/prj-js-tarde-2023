@@ -22,15 +22,16 @@ submit.addEventListener('click', function (e) {
             response.json()
 
                 .then(function (data) {
-                    console.log(data);
+                    //console.log(data);
                     for (let i = 0; i < data.length; i++) {
                         let login1 = data[i].login;
                         let senha1 = data[i].senha;
                         let nome = data[i].nome;
                        
                         if (searchl == login1 && searchs == senha1) {
-
-                            location.href = `sfilmes.html?nome=${nome}`
+                            //console.log(data[i].nome)
+                            window.location.assign(`sfilmes.html?nome=${nome}`);
+                            //location.href = `sfilmes.html?nome=${nome}`
                         } else {
                             alert('Dados Incorretos')
                         }
