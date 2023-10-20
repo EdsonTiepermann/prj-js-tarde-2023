@@ -2,6 +2,7 @@
 let log = document.getElementById('login')
 let senhas = document.getElementById('senha')
 let botao = document.querySelector('#btn')
+let item = document.getElementById('divlista')
 
 botao.addEventListener('click', function(e) {
     let search = log.value 
