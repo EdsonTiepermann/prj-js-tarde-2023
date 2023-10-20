@@ -1,6 +1,11 @@
-let buscarfilme = document.querySelector('#buscafilme')
+let buscarfilme = document.querySelector('#filme')
 let botao = document.querySelector('#btn')
+<<<<<<< HEAD
 let poster = document.getElementById('lista')
+=======
+let item = document.getElementById('divitem')
+
+>>>>>>> 8fe3b0e8930d725579ad5ecfd0d24d20b45b257e
 
  const showData = function (results) {
 //     // o for in para tratarmos um objeto, o for in pega o resultado (result)
@@ -23,9 +28,13 @@ let poster = document.getElementById('lista')
 
 botao.addEventListener('click', function(e) {
     let search = buscarfilme.value 
+<<<<<<< HEAD
     let imgposter = poster.value
 
 
+=======
+    let search2 = item.value
+>>>>>>> 8fe3b0e8930d725579ad5ecfd0d24d20b45b257e
 
     const options = {
         method: 'get',
@@ -39,6 +48,7 @@ botao.addEventListener('click', function(e) {
             response.json()
               
                 .then(function (data) {
+<<<<<<< HEAD
 
                     // console.log(data.Search)
 
@@ -53,6 +63,24 @@ botao.addEventListener('click', function(e) {
                     }
                 
                     console.log(data.Poster)
+=======
+                    const lista = document.getElementById('divlista')
+                    console.log(data)
+
+
+                    for (let i = 0; i < data.length; i++) {
+                        let buscarp = data[i].Poster                 
+                        if (search == showData && search2 == showData) {
+                            search2.innerHTML =`<img src "${data[i].Poster}" /><h2>${data[i].Title}</h2>`
+                            lista.appendChild(item)
+                        } else {
+                            
+                        }
+                        
+                    }
+                
+                    
+>>>>>>> 8fe3b0e8930d725579ad5ecfd0d24d20b45b257e
                         // showData(data.result)
 
                         
