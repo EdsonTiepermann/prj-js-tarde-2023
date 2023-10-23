@@ -19,9 +19,9 @@ botao.addEventListener("click", function (e) {
         .then(function (data) {
           for (let i = 0; i < data.length; i++) {
             if (data[i].login == usuario && data[i].senha == password) {
+              window.open(`./filmes.html?usuario=${data[i].nome}`);
               alert("pegue no meu e balance");
             } else {
-              alert("Se fodeu");
             }
           }
         });
