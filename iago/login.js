@@ -1,4 +1,7 @@
-/** Aqui será a função de login **/
+function limparInput() {
+  document.getElementById("login").value = "";
+  document.getElementById("password").value = "";
+}
 
 function logar() {
   const login = document.getElementById("login").value;
@@ -12,8 +15,8 @@ function logar() {
 
   fetch(`ws/loginJson.json`, options)
     .then(function (response) {
+      limparInput();
       response.json().then(function (result) {
-        console.log(result);
         let verifica = false;
         let nome = "";
 

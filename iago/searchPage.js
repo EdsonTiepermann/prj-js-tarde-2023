@@ -27,7 +27,6 @@ function showData(listaFilme) {
 
 document.querySelector("#buscar").addEventListener("click", function (e) {
   const filtro = document.querySelector("#filtro");
-  const botao = document.querySelector("#buscar");
 
   let search = filtro.value.replace("-", "");
 
