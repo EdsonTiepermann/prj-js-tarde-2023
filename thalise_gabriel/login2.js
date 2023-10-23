@@ -2,6 +2,15 @@ var login = document.querySelector("#login")
 var senha = document.querySelector("#senha")
 const botao = document.querySelector("#botao")
 
+const showData = function(result){
+    for(const campo in result) {
+        console.log(campo)
+        if (document.querySelector('#' + campo)){
+            document.querySelector('#' + campo).value = result[campo]
+        }
+    }
+}
+
 botao.addEventListener('click', function (e) {
     e.preventDefault()
     const options = {
