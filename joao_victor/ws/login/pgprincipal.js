@@ -26,7 +26,11 @@ function busca() {
                         let imagemURL = data.Search[i].Poster
                     let imagem = document.createElement("img")
                     imagem.src = imagemURL
-                    imagem.id = i
+                    imagem.id = data.Search[i].Title
+                    let titulo = imagem.id
+                    imagem.addEventListener('click',function(){
+                        window.open(`filme.html?filme=${titulo}`)
+                    })
                     document.getElementById("posterdiv").appendChild(imagem)
                         
                     }
