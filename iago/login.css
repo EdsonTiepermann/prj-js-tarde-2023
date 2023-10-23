@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #9a2e22;
+  background-color: rgb(0, 208, 255);
 }
 
 #imgpipoca {
@@ -8,18 +8,16 @@ body {
   height: 150px;
   border-radius: 100%;
   margin-top: 80px;
-  border-right: rgba(46, 3, 3, 0.947) solid 3px;
 }
 
 #login {
   margin-top: 15px;
   width: 280px;
   height: 38px;
-  border-radius: 4px;
-  border: rgba(46, 3, 3, 0.494) solid 2px;
+  border-radius: 10px;
   text-align: center;
   color: grey;
-  background-color: #811e13;
+  background-color: white;
   font-size: 20px;
   font-weight: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -34,11 +32,11 @@ body {
   margin-top: 3px;
   width: 280px;
   height: 38px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: rgba(46, 3, 3, 0.494) solid 2px;
   text-align: center;
   color: grey;
-  background-color: #811e13;
+  background-color: white;
   font-size: 20px;
   font-weight: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
