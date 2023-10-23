@@ -33,6 +33,7 @@ botao.addEventListener('click', function(e) {
                         alert('Login feito com sucesso')
                         window.open(`./buscafilme.html?nome=${nomes}`)
                     }
+
                     else{
                         alert('deu erro')
                     }
