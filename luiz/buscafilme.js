@@ -1,5 +1,6 @@
-let buscarfilme = document.querySelector('#buscafilme')
+let buscarfilme = document.querySelector('#filme')
 let botao = document.querySelector('#btn')
+
 
  const showData = function (results) {
 //     // o for in para tratarmos um objeto, o for in pega o resultado (result)
@@ -21,9 +22,7 @@ let botao = document.querySelector('#btn')
 
 
 botao.addEventListener('click', function(e) {
-    let search = buscarfilme.value 
-
-
+    let search = buscarfilme.value
 
     const options = {
         method: 'get',
@@ -37,18 +36,26 @@ botao.addEventListener('click', function(e) {
             response.json()
               
                 .then(function (data) {
-                    for (let i = 0; i < data.length; i++) {
-                          let buscarfilme = data[i].Poster
-                        if (search == buscarfilme) {
-                            document.querySelector('listaf').innerHTML= data
-                            
-                        } else {
-                            
-                        }
+
+
+                    // console.log(data.Search)
+
+
+                    for (let i = 0; i < data.Search.length; i++) {
+                          let verposter = data.Search[i].Poster;
+                          let verfilme = data.Search[i].Title;
+
+                          document.querySelector('#item').innerHTML += `<a href="filme.html"=${verfilme}><img src="${verposter}"></a>`
+
                         
                     }
                 
                     console.log(data)
+
+                    
+                
+                    
+
                         // showData(data.result)
 
                         
