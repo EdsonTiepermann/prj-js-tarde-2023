@@ -1,9 +1,10 @@
 
 function cadastrar() {
-    var nome = document.getElementById("login").value;
-    var senha = document.getElementById("senha").value;
+    let nome = document.getElementById('nome').value
+    let login = document.getElementById("login").value;
+    let senha = document.getElementById("senha").value;
 
-    if (nome === "" || senha === "") {
+    if (nome === "" || senha === "" || login === "") {
         alert("Por favor, preencha todos os campos.");
         return;
     }
@@ -21,15 +22,15 @@ function cadastrar() {
                 .then(function (data) {
                     console.log(data)
                     
-                    if (nome == data[0].login && senha == data[0].senha) {
+                    if (login == data[0].login && senha == data[0].senha && nome == data[0].nome) {
                         alert('login bem sucedido!')
                         window.open(`pgprincipal.html?nomeUsu=${nome}&senha=${senha}`)
                     }
-                    else if (nome == data[1].login && senha == data[1].senha) {
+                    else if (login == data[1].login && senha == data[1].senha && nome == data[1].nome) {
                         alert('login bem sucedido!')
                         window.open(`pgprincipal.html?nomeUsu=${nome}&senha=${senha}`)
                     }
-                    else if (nome == data[2].login && senha == data[2].senha) {
+                    else if (login == data[2].login && senha == data[2].senha && nome == data[2].nome) {
                         alert('login bem sucedido!')
                         window.open(`pgprincipal.html?nomeUsu=${nome}&senha=${senha}`)
                     }
