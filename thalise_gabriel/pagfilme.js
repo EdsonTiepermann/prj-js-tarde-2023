@@ -1,15 +1,13 @@
 var filme = document.querySelector("#filme")
-const botao = document.querySelector("#botao")
+let filmes = filme.value
 
-botao.addEventListener('click', function (e) {
-    let filmes = filme.value
-e.preventDefault()
 const options = {
     method: 'GET',
     mode: 'cors',
     cache: 'default',
 }
-fetch(`http://www.omdbapi.com/?s=${filmes}&apikey=cfc1236f`, options)
+
+fetch(`http://www.omdbapi.com/?t=${filmes}&apikey=cfc1236f`, options)
 .then(function (response) {
     response.json()
         .then(function (data) {
@@ -22,10 +20,9 @@ fetch(`http://www.omdbapi.com/?s=${filmes}&apikey=cfc1236f`, options)
 .catch((error) => {
     console.log(error);
 });
-})
 
 const carregarFilme = (json) => {
-    const lista = document.querySelector("div.lista");
+    const lista = document.querySelector("div.filme");
     lista.innerHTML = "";
 
     json.Search.forEach(element => {
@@ -34,7 +31,7 @@ const carregarFilme = (json) => {
        let item = document.createElement("div");
        item.classList.add("item");
 
-       item.innerHTML = `<a href ="${`pagfilme.html`}"> <img src="${element.Poster}" /><h2>${element.Title}</h2></a>`;
+       item.innerHTML = `<img src="${element.Poster}" /><h2>${element.Title}</h2><h3>${element.Rated}</h3><h3>${element.Genre}</h3><h3>${element.Plot}</h3<h3>${element.imdbRating}</h3>></a>`;
 
        lista.appendChild(item);
     });
