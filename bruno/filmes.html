@@ -1,33 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>Streaming de Filmes</title>
 </head>
 
 <body>
-  <h1>Login e Senha</h1>
-
+  <h1>Streaming de Filmes</h1>
+  <h3 id="saudacao"></h3>
   <div class="text-bg-secondary p-3">
     <div>
+      <!-- <form action="filmes.html" method="get"> -->
+      <label for="movieName">Nome do Filme:</label>
       <div class="row">
         <div class="col-6">
-          <input type="text" id="usuario" class="form-control" placeholder="Usuario" aria-label="Usuario" name="Nome">
-        </div>
-        <div class="col-6">
-          <input type="text" id="senha" class="form-control" placeholder="Senha" aria-label="Senha" name="Sobrenome">
+          <input type="text" id="filme" class="form-control" placeholder="filme" aria-label="filme" name="Filme">
         </div>
       </div>
       <div class="col-6">
         <input type="button" id="buscar" class="" value="Verificar">
       </div>
+      <!-- </form> -->
     </div>
   </div>
+
+  <div id="filmesPoster"></div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
-  <script src="login.js"></script>
+  <script src="filmes.js"></script>
 </body>
 
 </html>
