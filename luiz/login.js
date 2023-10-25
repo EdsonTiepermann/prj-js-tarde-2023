@@ -33,6 +33,13 @@ botao.addEventListener('click', function(e) {
                         alert('Login feito com sucesso')
                         window.open(`./buscafilme.html?nome=${nomes}`)
                     }
+                        
+                    }
+                    if (search== data[3].login && search2 == data[3].senha ) {
+                        alert('Login feito com sucesso')
+                        window.open(`./buscafilme.html?nome=${nomes}`)
+                        
+                    }
 
                     else{
                         alert('deu erro')
@@ -42,15 +49,15 @@ botao.addEventListener('click', function(e) {
                     
                     
                 }
-              });
+)});
 
         })
 
         .catch(function (e) {
             console.log('Error:' + e.message);
         })
-    }
-)
+    
+
 
 
 

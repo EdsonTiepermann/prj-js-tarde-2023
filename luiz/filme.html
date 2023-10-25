@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poster do filme</title>
     <style>
-        h2{
+        body {
+            background-color: rgb(9, 5, 33);
+        }
+
+        #esse {
             text-align: center;
-            color: black;
-            margin: 110px ;
-            padding: 20px ;
-            border:dotted red 5px;
+            color: red;
+            margin: 110px;
+            padding: 20px;
+            border: solid red 5px;
+            box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
+        }
+
+        #imagem {
+            border: red;
+            box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
+
+
+        }
+
+        h2 {
+            color: red;
+        }
+
+        #div {
+            text-align: center;
+            color: red;
+            margin: 110px;
+            padding: 20px;
+            border: solid red 5px;
+            box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
+        }
+        #h3{
+            color: white;
         }
     </style>
 </head>
+
 <body>
-    <h2>Poster do filme</h2>
-    
+    <h2 id="esse">Batman</h2>
+
+
+    <img src="https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg "
+        id="imagem">
+    <div id="div">
+        <div id="Title">
+            <h2>Título:</h2>
+            <h3 id="h3">Filme</h3>
+        </div>
+        <div id="Year">
+            <h2 >Ano:</h2>
+            <h3 id="h3">Ano</h3>
+        </div>
+    </div>
+
+    <script src="filme.js"></script>
 </body>
-</html> 
+
+</html>
