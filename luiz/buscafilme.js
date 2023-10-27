@@ -1,5 +1,7 @@
 let buscarfilme = document.querySelector('#filme')
 let botao = document.querySelector('#btn')
+// let nomef = document.getElementById('Title')
+// let anof = document.getElementById('Year')
 
 
  const showData = function (results) {
@@ -45,7 +47,10 @@ botao.addEventListener('click', function(e) {
                           let verposter = data.Search[i].Poster;
                           let verfilme = data.Search[i].Title;
 
-                          document.querySelector('#item').innerHTML += `<a href="filme.html"=${verfilme}><img src="${verposter}"></a>`
+                          document.querySelector('#item').innerHTML += `<a href="filme.html"=${verfilme}><img src="${verposter}">
+                          <img src="${verposter}"></a>`
+                          
+    
 
                         
                     }
