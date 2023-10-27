@@ -22,12 +22,10 @@ function showData(result) {
 
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get("nomeFilme");
-console.log(myParam);
 
 fetch(`http://www.omdbapi.com/?t=${myParam}&apikey=1b6aee61`, options)
   .then(function (response) {
     response.json().then(function (data) {
-      console.log(data);
       showData(data);
     });
   })

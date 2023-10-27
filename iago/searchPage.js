@@ -8,6 +8,7 @@ function limparInput() {
 
 function showData(listaFilme) {
   document.querySelector("#inicial").style.display = "none";
+  document.getElementById("object").innerHTML = "";
 
   for (let index = 0; index < listaFilme.Search.length; index++) {
     document.getElementById(
@@ -18,11 +19,9 @@ function showData(listaFilme) {
 
   [].forEach.call(elementos, function (el) {
     el.addEventListener("click", function (evento) {
-      console.log(el.id);
       window.location.href = `./poster.html?nomeFilme=${el.id}`;
     });
   });
-  console.log(elementos.length);
 }
 
 document.querySelector("#buscar").addEventListener("click", function (e) {
