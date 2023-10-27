@@ -1,18 +1,8 @@
-
-let anof = document.getElementById('Year')
-let div = document.getElementById('div')
-let imagem = document.getElementById('imagem')
+let nomeParametro = new URLSearchParams(window.location.search);
+let titulo = nomeParametro.get('filme')
 
 
-
-// let nomeParametro = new URLSearchParams(window.location.search);
-
-// let nomefilmes = nomeParametro.get('item')
-
-
-// var nomeusuario = document.getElementById('#item').innerHTML= nomefilmes
-
-
+alert(titulo)
 
 
 
@@ -22,55 +12,31 @@ const options = {
     mode: 'cors',
     cache: 'default'
 }
-fetch(`http://www.omdbapi.com/?t=&apikey=f450f23a`, options)
+fetch(`http://www.omdbapi.com/?t=${titulo}&apikey=f450f23a`, options)
 
-.then(function (response) {
-    response.json()
-      
-        .then(function (data) {
-           
+    .then(function (response) {
+        response.json()
 
-
-
-
-            // console.log(data.Search)
-
-
-            for (let i = 0; i < data.length; i++) {
-                  let verposter = data[i].Poster;
-                  let verfilme = data[i].Title;
-
-                 if (verposter == div && verfilme== div) {
-                    console.log(data)
-                 } else {
-                    
-                 }
+            .then(function (data) {
                 
-            }
-        
+                document.querySelector('#esse').innerHTML = `${titulo}`
+                document.querySelector('#h3').innerHTML = `${data.Title}`
+                document.querySelector('#div2').innerHTML =  `<img src ="${data.Poster}">`
+                document.querySelector('#ANO').innerHTML = `${data.Year}`
+                document.querySelector('#nota').innerHTML = `${data.Rated}`
+                document.querySelector('#sin').innerHTML = `${data.Plot}`
+                document.querySelector('#gen').innerHTML = `${data.Genre}`
             
-
-            
-        
-            
-
-                // showData(data.result)
+               
 
                 
-            
-            
-    
-      });
+               
+                
+                console.log(data)
 
-})
+            });
+    })
 
-.catch(function (e) {
-    console.log('Error:' + e.message);
-})
-
-
-
-
-
-
-
+    .catch(function (e) {
+        console.log('Error:' + e.message);
+    })
