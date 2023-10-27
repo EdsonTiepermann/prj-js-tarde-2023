@@ -28,6 +28,12 @@ function busca() {
             response.json()
                 .then(function (data) {
                     console.log(data);
+
+                    if (data.Response == "False") {
+                        alert ('filme não encontrado.')
+                    }
+                    else {
+
                     for (let i = 0; i < data.totalResults; i++) {
                         let imagemURL = data.Search[i].Poster;
                         let imagem = document.createElement("img");
@@ -39,6 +45,7 @@ function busca() {
                         });
                         posterDiv.appendChild(imagem);
                     }
+                }
                 })
         })
         .catch(function (error) {
