@@ -1,6 +1,8 @@
 let uparams = new URLSearchParams(window.location.search);
 let titulo = uparams.get('filme');
 
+document.title = titulo
+
 console.log(titulo)
 
 const options = {
@@ -8,6 +10,8 @@ const options = {
     mode: 'cors',
     cache: 'default'
 }
+
+
 
 fetch(`http://www.omdbapi.com/?apikey=f450f23a&t=${titulo}`, options)
     .then(function (response) {
