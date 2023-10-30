@@ -21,7 +21,7 @@ function cadastrar() {
             response.json()
                 .then(function (data) {
                     console.log(data)
-                    
+
                     if (login == data[0].login && senha == data[0].senha && nome == data[0].nome) {
                         alert('login bem sucedido!')
                         window.open(`pgprincipal.html?nomeUsu=${nome}&senha=${senha}`)

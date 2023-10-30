@@ -30,22 +30,22 @@ function busca() {
                     console.log(data);
 
                     if (data.Response == "False") {
-                        alert ('filme não encontrado.')
+                        alert('filme não encontrado.')
                     }
                     else {
 
-                    for (let i = 0; i < data.totalResults; i++) {
-                        let imagemURL = data.Search[i].Poster;
-                        let imagem = document.createElement("img");
-                        imagem.src = imagemURL;
-                        imagem.id = data.Search[i].Title;
-                        let titulo = imagem.id;
-                        imagem.addEventListener('click', function () {
-                            window.open(`filme.html?filme=${titulo}`);
-                        });
-                        posterDiv.appendChild(imagem);
+                        for (let i = 0; i < data.totalResults; i++) {
+                            let imagemURL = data.Search[i].Poster;
+                            let imagem = document.createElement("img");
+                            imagem.src = imagemURL;
+                            imagem.id = data.Search[i].Title;
+                            let titulo = imagem.id;
+                            imagem.addEventListener('click', function () {
+                                window.open(`filme.html?filme=${titulo}`);
+                            });
+                            posterDiv.appendChild(imagem);
+                        }
                     }
-                }
                 })
         })
         .catch(function (error) {
