@@ -7,7 +7,6 @@ function limparInput() {
 }
 
 function showData(listaFilme) {
-  console.log(listaFilme);
   if (listaFilme.Response !== "False") {
     document.querySelector("#inicial").style.display = "none";
     document.getElementById("object").innerHTML = "";
