@@ -5,12 +5,8 @@ const options = {
 };
 
 function showData(result) {
-  // o for in  para tratarmos o objeto, o for in pega o resultado (result) e insere na variável campo
   for (const campo in result) {
-    //nesse if verifico dinamicamente se todos os campos da api eu utilizo nos inputs
     if (document.querySelector("#" + campo)) {
-      //Pegamos dinamicamente o elemento dos inputs e passamos o value dinamicamente, dizendo q o result é um arrayy e passando
-      // a variável campo como posição
       document.querySelector("#" + campo).innerHTML = result[campo];
     }
     if (campo == "Poster") {
