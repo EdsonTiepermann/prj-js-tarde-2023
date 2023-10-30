@@ -4,7 +4,7 @@ body {
 }
 
 #imgpipoca {
-  width: 150x;
+  width: 150px;
   height: 150px;
   border-radius: 100%;
   margin-top: 80px;
@@ -19,7 +19,6 @@ body {
   color: grey;
   background-color: white;
   font-size: 20px;
-  font-weight: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -38,7 +37,6 @@ body {
   color: grey;
   background-color: white;
   font-size: 20px;
-  font-weight: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -57,7 +55,6 @@ button {
   color: white;
   background-color: rgba(34, 32, 32, 0.84);
   font-size: 20px;
-  font-weight: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   cursor: pointer;
 }
