@@ -10,7 +10,10 @@
             background-color: rgb(9, 5, 33);
         }
 
-        #esse {
+        #tituloinicial {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
             text-align: center;
             color: red;
             margin: 110px;
@@ -19,18 +22,8 @@
             box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
         }
 
+
         #imagem {
-            border: red;
-            box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
-
-
-        }
-
-        h2 {
-            color: red;
-        }
-
-        #div {
             text-align: left;
             color: red;
             margin: 110px;
@@ -38,44 +31,58 @@
             border: solid red 5px;
             box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
         }
-        #div2 {
+        div{
+            font-family: Arial, Helvetica, sans-serif;
             text-align: right;
             color: red;
             margin: 110px;
             padding: 20px;
-            border: solid red 5px;
+            border: solid 4px;
             box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
-        }
-        h3{
-            color: white;
-        }
 
-        #h3 {
+        }
+        div > h3 {
+            font-size: 20px;
             color: white;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight:normal;
+    
+        }
+        div >div{
+            text-align: left;
+            
+
         }
     </style>
 </head>
 
 <body>
-    <h2 id="esse"></h2>
-    <div id="div2">
-    <div id ="div"></div>
+    <h2 id="tituloinicial"></h2>
+<div>
+    <div id="imagem"></div>
+     <h2>Título:</h2>
+        <h3 id="h3">Filme</h3>
+    <h2>Ano:</h2>
+        <h3 id="ANO"></h3>
+    <h2>Nota:</h2>
+        <h3 id="nota"></h3>
+    <h2>Sinopse:</h2>
+        <h3 id="sin"></h3>
+    <h2>Gênero:</h2>
+        <h3 id="gen"></h3>
+    <h2>Classificação indicativa</h2>
+        <h3 id="classi"></h3>
 
-        <h2>Título:</h2>
-            <h3 id="h3">Filme</h3>
-        <h2>Ano:</h2>
-            <h3 id="ANO">Ano</h3>
-        <h2>Nota:</h2>
-            <h3 id="nota"></h3>
-        <h2>Sinopse:</h2>
-            <h3 id="sin"></h3>
-        <h2>Gênero:</h2>
-            <h3 id="gen"></h3>
-        <h2>Classificação indicativa</h2>
-            <h3 id="classi"></h3>            
-        </div>
+</div>
 
-    </div>
+
+
+
+
+
+
+
+
 
     <script src="filme.js"></script>
 

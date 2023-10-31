@@ -46,8 +46,8 @@ botao.addEventListener('click', function(e) {
                     for (let i = 0; i < data.Search.length; i++) {
                           let verposter = data.Search[i].Poster;
                           let verfilme = data.Search[i].Title;
-                          let imagem = document.createElement('img')
-                          imagem.id
+                        //   let imagem = document.createElement('img')
+                        //   imagem.id
                 
 
                           document.querySelector('#item').innerHTML += `<a href="filme.html?filme=${verfilme}"><img src="${verposter}">></a>`
