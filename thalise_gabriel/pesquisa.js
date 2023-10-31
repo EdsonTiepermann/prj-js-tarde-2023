@@ -1,5 +1,6 @@
 var filme = document.querySelector("#filme")
 const botao = document.querySelector("#botao")
+var titulo =  document.querySelector("#titulo")
 
 botao.addEventListener('click', function (e) {
     let filmes = filme.value
@@ -34,7 +35,7 @@ const carregarFilme = (json) => {
        let item = document.createElement("div");
        item.classList.add("item");
 
-       item.innerHTML = `<a href ="${`pagfilme.html`}"> <img src="${element.Poster}" /><h2>${element.Title}</h2></a>`;
+       item.innerHTML = `<a href= pagfilme.html?titulo=${element.Title})> <img src="${element.Poster}" /><h2>${element.Title}</h2></a>`;
 
        lista.appendChild(item);
     });
