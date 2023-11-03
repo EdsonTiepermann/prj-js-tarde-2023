@@ -19,11 +19,15 @@ fetch(`http://www.omdbapi.com/?t=${titulo}&apikey=f450f23a`, options)
 
             .then(function (data) {
 
-                document.querySelector('#esse').innerHTML = `${titulo}`
+                document.querySelector('#tituloinicial').innerHTML = `${titulo}`
                 document.querySelector('#h3').innerHTML = `${data.Title}`
+<<<<<<< HEAD
                 let item = document.getElementById('div2')
                 item.innerHTML= `<img src="${data.Poster}">`
                 // document.querySelector('#div2').innerHTML = 
+=======
+                document.querySelector('#imagem').innerHTML =`<img src ="${data.Poster}">`
+>>>>>>> e62130b926314f177a061d550db57ec512a7c399
                 document.querySelector('#ANO').innerHTML = `${data.Year}`
                 document.querySelector('#nota').innerHTML = `${data.Metascore}`
                 document.querySelector('#sin').innerHTML = `${data.Plot}`
