@@ -21,7 +21,9 @@ fetch(`http://www.omdbapi.com/?t=${titulo}&apikey=f450f23a`, options)
 
                 document.querySelector('#esse').innerHTML = `${titulo}`
                 document.querySelector('#h3').innerHTML = `${data.Title}`
-                document.querySelector('#div').innerHTML = `<img src ="${data.Poster}">`
+                let item = document.getElementById('div2')
+                item.innerHTML= `<img src="${data.Poster}">`
+                // document.querySelector('#div2').innerHTML = 
                 document.querySelector('#ANO').innerHTML = `${data.Year}`
                 document.querySelector('#nota').innerHTML = `${data.Metascore}`
                 document.querySelector('#sin').innerHTML = `${data.Plot}`
