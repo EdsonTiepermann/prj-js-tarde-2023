@@ -1,32 +1,40 @@
-let nomeParametro = new URLSearchParams(window.location.search);
-let filmeInfo = nomeParametro.get('filme')
+let getParametro = new URLSearchParams(window.location.search);
+let nomeFilme = getParametro.get("tituloFilme");
 
+const apikey = "cfc1236f";
 const options = {
-    method: 'GET',
-    mode: 'cors',
-    cache: 'default',
-}
+  method: "GET",
+  mode: "cors",
+  cache: "default",
+};
 
-fetch(`http://www.omdbapi.com/?t=${filmeInfo}&apikey=cfc1236f`, options)
-.then(function (response) {
+fetch(`http://www.omdbapi.com/?t=${nomeFilme}&apikey=${apikey}`, options)
+.then( function (response) {
     response.json()
+    .then(function (data) {
+      console.log(data);
+      document.querySelector("#titulo").innerHTML = `<p>${data.Title}</p>`;
+      document.querySelector("#nota").innerHTML = `<p>${data.Metascore}</p>`;
+      document.querySelector("#sinopse").innerHTML = `<p>${data.Plot}</p>`;
+      document.querySelector("#genero").innerHTML = `<p>${data.Genre}</p>`;
+      document.querySelector("#class").innerHTML = `<p>${escolhaClassi(data.Rated)}</p>`;
+      document.querySelector("#filmes").innerHTML = `<img src=${data.Poster}>`;
+    });
 
-        .then(function (data) {
-            const filmeInfos = (json) => { 
-            json.Search.forEach(element => {
-                console.log(element);
-
-            let item = document.createElement("div");
-            item.classList.add("item");
-
-            item.innerHTML = `<img src="${element.Poster}"/><h2>${element.Title}</h2>`;
-
-            console.log(data)
-            
-        });
-    }
-})
-})
-.catch(function (e) {
-    console.log('Error:' + e.message);
-})
+    function escolhaClassi(classi) {
+      switch (classi) {
+          case "G":
+              return "Classificação Livre";
+          case "PG":
+              return "Orientação dos Responsáveis";
+          case "PG-13":
+              return "Classificação 14 anos";
+          case "R":
+              return "Classificação 16 anos";
+          case "NC-17":
+              return "Classificação 18 anos";
+          default:
+              return "Classificação não disponível";
+  }
+   }
+ });

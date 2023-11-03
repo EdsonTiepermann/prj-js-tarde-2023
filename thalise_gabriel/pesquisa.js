@@ -2,6 +2,11 @@ var filme = document.querySelector("#filme")
 const botao = document.querySelector("#botao")
 var titulo =  document.querySelector("#titulo")
 
+let nomeParametro = new URLSearchParams(window.location.search);
+let nomeCliente = nomeParametro.get('login')
+
+document.querySelector('#saudacao').innerHTML = `Seja bem vindo ${nomeCliente}`;
+
 botao.addEventListener('click', function (e) {
     let filmes = filme.value
 e.preventDefault()
