@@ -5,27 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
-    <!-- CSS Sugerido (Opcional) -->
     <style>
-        .container {
-            margin: 20px;
-        }
-        
-        .lista .item {
-            margin-top: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .lista .item img {
-            max-width: 100px;
-            margin-right: 20px;
-        }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+h1 {
+    color: #e50914; 
+    font-size: 24px;
+}
+form {
+    margin-top: 20px;
+}
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 18%;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #e50914; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item {
+    background-color: #fff; 
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+}
+h2 {
+    font-size: 16px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
     </style>
 </head>
-
+]
 <body>
     <h1 id="saudacao"></h1>
     <form class="container" role="search">
