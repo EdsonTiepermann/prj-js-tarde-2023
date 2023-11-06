@@ -7,73 +7,109 @@
     <title>Poster do filme</title>
     <style>
         body {
-            background-color: rgb(9, 5, 33);
-        }
-
-        #tituloinicial {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 20px;
             text-align: center;
-            color: red;
-            margin: 110px;
-            padding: 20px;
-            border: solid red 5px;
-            box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
+            background: rgb(18, 15, 15);
+        }
+
+        #poster {
+            transition: 0.4s;
+            border-radius: 17px;
+            box-shadow: 5px 5px 30px 10px #000000;
+        }
+
+        @media(max-width :368px) {
+            #poster{
+            transition: 0.4s;
+            border-radius: 17px;
+            box-shadow: 5px 5px 30px 10px #000000;
+            }
         }
 
 
-        #imagem {
+        #poster:hover {
+            transform: translateY(-6px);
+            cursor: pointer;
+            box-shadow: 5px 10px 40px red;
+        }
+
+        #div2 {
+            text-align: left;
+        }
+
+        h1 {
+            color: red;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            letter-spacing: 3px;
+            font-size: 30px;
+        }
+
+        h2 {
+            color: rgb(255, 0, 0);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .dados {
+            text-align: center;
+        }
+
+        /* #imagem {
             text-align: left;
             color: red;
-            margin: 110px;
-            padding: 20px;
+            margin: 50px;
+            width: 15px;
             border: solid red 5px;
             box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
-        }
-        div{
+        } */
+        .geral {
             font-family: Arial, Helvetica, sans-serif;
-            text-align: right;
-            color: red;
-            margin: 110px;
+            text-align: left;
+            margin: 50px;
             padding: 20px;
             border: solid 4px;
-            box-shadow: rgb(95, 9, 9) 10px 5px 100px 100px;
+            box-shadow: 5px 5px 30px 10px #000000;
+            border-radius: 20px;
+
 
         }
-        div > h3 {
+
+        div>h3 {
             font-size: 20px;
             color: white;
-            font-family:Arial, Helvetica, sans-serif;
-            font-weight:normal;
-    
-        }
-        div >div{
-            text-align: left;
-            
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            letter-spacing: 2px;
 
         }
     </style>
 </head>
 
 <body>
-    <h2 id="tituloinicial"></h2>
-<div>
-    <div id="imagem"></div>
-     <h2>Título:</h2>
+
+
+
+    <h1 id="tituloinicial"></h1>
+
+    <div class="geral">
+        <div id="imagem">
+        </div>
+
+        <h2>Título:</h2>
         <h3 id="h3">Filme</h3>
-    <h2>Ano:</h2>
+        <h2>Ano:</h2>
         <h3 id="ANO"></h3>
-    <h2>Nota:</h2>
+        <h2>Nota:</h2>
         <h3 id="nota"></h3>
-    <h2>Sinopse:</h2>
+        <h2>Sinopse:</h2>
         <h3 id="sin"></h3>
-    <h2>Gênero:</h2>
+        <h2>Gênero:</h2>
         <h3 id="gen"></h3>
-    <h2>Classificação indicativa</h2>
+        <h2>Classificação indicativa</h2>
         <h3 id="classi"></h3>
 
-</div>
+
+
+    </div>
 
 
 

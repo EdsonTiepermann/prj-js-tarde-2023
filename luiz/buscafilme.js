@@ -50,9 +50,10 @@ botao.addEventListener('click', function(e) {
                         //   imagem.id
                 
 
-                          document.querySelector('#item').innerHTML += `<a href="filme.html?filme=${verfilme}"><img src="${verposter}">></a>`
-                          
-                        //   window.open(`./filme.html?filme=${verfilme}`)
+                          document.querySelector('#item').innerHTML += 
+                          `<a href="filme.html?filme=${verfilme}">
+                          <img src="${verposter}" id ="poster"></a>`
+                        //   document.querySelector('#titulo').innerHTML= data.Title;
     
 
                         

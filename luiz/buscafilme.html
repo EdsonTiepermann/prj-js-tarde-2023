@@ -4,44 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
-      padding: 200px;
-      color: black;
-      text-align: center;
-    }
-    #nome{
-      color: blue;
-    }
+  <title>Busca do filme</title>
+  <link rel="stylesheet" href="buscafilme.css">
 
-    input {
-      margin-top: 20px;
-      width: 500px;
-    }
-
-    #cor {
-      color: black;
-    }
-
-    #imagem {
-      text-align: left;
-      width: 200px;
-      height: 100px;
-    }
-  </style>
 </head>
+
 <body>
-  
+  <div class="filme-busca">
+    <h1 id="cor">Seja Bem vindo!<h2 id="nome"></h2>
+    </h1>
+  </div>
+
+  <div class="barrapesquisa">
+    <input type="text" id="filme" placeholder="buscarfilme">
+    <button id="btn">
+      <img src="loupe.png" height="20" width="20" id="lupa">
+    </button>
+
+  </div>
 
 
 
-    <h1 id="cor">Seja Bem vindo!<h2 id="nome"></h2></h1>
-      <input type="text" id="filme" placeholder="buscarfilme">
-      <button id="btn">Buscar filme</button>
-    <div id="item">
-      
-    </div> 
+
+
+  <div id="item">
+
+  </div>
+
+  </div>
 
 
 
@@ -49,7 +39,6 @@
 
   <script src="buscafilme.js"></script>
   <script src="peganome.js"></script>
-
 </body>
 
 </html>

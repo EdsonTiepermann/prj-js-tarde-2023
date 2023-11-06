@@ -1,0 +1,115 @@
+body {
+    text-align: center;
+    background: rgb(18, 15, 15);
+  }
+
+  #item {
+    display: grid;
+    gap: 10px;
+    margin: 30px;
+    grid-template-areas:
+      'poster poster poster poster '
+      'poster poster poster poster';
+  }
+  @media( max-width : 768px) {
+    #item{
+      grid-template-areas:
+            'poster '
+            'poster'
+            'poster' 
+              ;
+    }
+
+  }
+  @media( max-width : 368px) {
+    #item{
+      grid-template-areas:
+            'poster'
+            'poster'
+            'poster'
+              ;
+    }
+  }
+
+  .filme-busca>h1 {
+    color: rgb(255, 0, 0)
+  }
+
+
+  .filme-busca>h2 {
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+  .barrapesquisa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .barrapesquisa>input {
+    width: 50%;
+    font-size: 15px;
+    font-weight: bold;
+    border: rgb(255, 0, 0);
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 30px 10px #000000;
+    background-color: rgb(234, 224, 224);
+    padding: 12px;
+    transition: 0.5s;
+
+  }
+
+  .barrapesquisa>input:focus::placeholder {
+    opacity: 1;
+  }
+
+
+  .barrapesquisa>input:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+
+  #btn {
+    font-weight: bold;
+    width: 150px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 2px;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    font-weight: 800px;
+    background: rgb(225, 12, 12);
+    border: red;
+    color: #0c0c0c;
+    box-shadow: 0 10px 40px #ff0d0052;
+    transition: 0.4s;
+  }
+
+  #btn:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+
+  }
+
+  #poster {
+    transition: 0.4s;
+    box-shadow: 5px 5px 30px 10px #000000;
+    border-radius: 15px;
+
+
+
+
+  }
+
+  #poster:hover {
+    cursor: pointer;
+    transform: translateY(-6px);
+    box-shadow: 5px 10px 40px red;
+  }
+
