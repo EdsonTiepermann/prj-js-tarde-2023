@@ -1,6 +1,8 @@
-var login = document.querySelector("#login")
-var senha = document.querySelector("#senha")
+var loginDigitado = document.querySelector("#login")
+var senhaDigitada = document.querySelector("#senha")
 const botao = document.querySelector("#botao")
+let verificacao = false;
+let nome = "";
 
 const showData = function(result){
     for(const campo in result) {
@@ -13,29 +15,32 @@ const showData = function(result){
 
 botao.addEventListener('click', function (e) {
     e.preventDefault()
+
     const options = {
         method: 'GET',
         mode: 'cors',
         cache: 'default',
     }
     fetch('ws/senhaJson.json', options)
+
         .then(function (response) {
             response.json()
-                .then(function (data) {
-                    console.log(data)
-                    for (let i = 0; i < data.length; i++){
-                        if (data[i].senha == senha.value & data[i].login == login.value) {
-                            console.log(showData)
-                            window.open(`./pesquisa.html?login=${login}&thagab=`);
-                            break;
+
+                .then(function(data) {
+                    for (let i = 0; i < data.length; i++) {
+                        if ((data[i].senha == senhaDigitada.value) && (data[i].login == loginDigitado.value)) {
+                            nome = data[i].nome;
+                            verificacao = true;
+                            break; 
                         } else {
-                            alert('Login ou senha incorretos')
-                            break;
+                            alert("Login ou senha incorretos");
                        }
-                    }                               
+                    }
+                    if (verificacao == true) {
+                        window.open(`./pesquisa.html?login=${nome}`);
+                    }                      
                 })
         })
-
         .catch((error) => {
             console.log(error);
         });
