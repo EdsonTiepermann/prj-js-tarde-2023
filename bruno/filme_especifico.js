@@ -15,10 +15,10 @@ fetch(`http://www.omdbapi.com/?t=${nomeFilme}&apikey=${apikey}`, options)
     .then(function (data) {
       console.log(data);
       document.querySelector("#titulo").innerHTML = `<p>${data.Title}</p>`;
-      document.querySelector("#nota").innerHTML = `<p>${data.Metascore}</p>`;
-      document.querySelector("#sinopse").innerHTML = `<p>${data.Plot}</p>`;
-      document.querySelector("#genero").innerHTML = `<p>${data.Genre}</p>`;
-      document.querySelector("#class").innerHTML = `<p>${escolhaClassi(data.Rated)}</p>`;
+      document.querySelector("#nota").innerHTML = "Nota do filme :" +`<p>${data.Metascore}</p>`;
+      document.querySelector("#sinopse").innerHTML = "Sinopse : " + `<p>${data.Plot}</p>`;
+      document.querySelector("#genero").innerHTML = "Genero : " + `<p>${data.Genre}</p>`;
+      document.querySelector("#class").innerHTML = "Classe : " + ` <p>${escolhaClassi(data.Rated)}</p>`;
       document.querySelector("#filmes").innerHTML = `<img src=${data.Poster}>`;
     });
 
@@ -39,3 +39,8 @@ fetch(`http://www.omdbapi.com/?t=${nomeFilme}&apikey=${apikey}`, options)
   }
    }
  });
+
+ // Adicione um evento de clique ao botão
+ document.getElementById("voltarBtn").addEventListener("click", function() {
+    window.history.back(); // Isso voltará à página anterior no histórico do navegador
+  });

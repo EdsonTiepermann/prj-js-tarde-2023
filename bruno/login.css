@@ -1,0 +1,35 @@
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilos para a caixa de login e senha */
+.text-bg-secondary {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#usuario, #senha {
+
+  border: 1px solid #ced4da;
+  margin-bottom: 10px;
+}
+
+#buscar {
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}

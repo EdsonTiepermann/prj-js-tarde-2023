@@ -1,69 +1,59 @@
+/* Estilos para o container principal */
 .container {
-  display: grid;
-  gap: 10px;
-  background-color: black;
-  grid-template-areas:
-  
-  "filme titulo nota sinopse genero class"
-    }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    .titulo {
-      grid-area: titulo;
-      padding: 50px;
-      font-size: 20px;
-      color: aqua;
-      background-color: rgba(255, 255, 255, 0.8);
-      font-size: 45px;
-      }
-
-    .nota {
-      grid-area: nota;
-      padding: 20px;
-      font-size: 30px;
-      color: aqua;
-      background-color: rgba(255, 255, 255, 0.8);
-      font-size: 45px;
-      }
-
-      .sinopse {
-        grid-area: sinopse;
-        padding: 20px;
-        font-size: 30px;
-        color: aqua;
-        background-color: rgba(255, 255, 255, 0.8);
-        font-size: 20px;
-        }
-
-        .genero {
-          grid-area: genero;
-          padding: 20px;
-          font-size: 30px;
-          color: aqua;
-          background-color: rgba(255, 255, 255, 0.8);
-          font-size: 45px;
-          }
-
-          .class {
-            grid-area: class;
-            padding: 20px;
-            font-size: 30px;
-            color: aqua;
-            background-color: rgba(255, 255, 255, 0.8);
-            font-size: 45px;
-            }
-
-            .filme {
-              grid-area: filme;
-              }
-
-
-
-
-
-/* Rodapé */
-footer {
-  background-color: #333;
-  color: #fff;
+/* Estilos para os elementos do grid */
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.nota {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.sinopse {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.genero, .class {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filmes {
+  font-size: 16px;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+#voltarBtn {
+  background-color: #4285F4;
+  border: none;
+  color: #fff;
   padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para o botão de pesquisa ao passar o mouse (hover) */
+#voltarBtn:hover {
+  background-color: #3579D8;
 }
