@@ -2,7 +2,7 @@ let nomeParametro = new URLSearchParams(window.location.search);
 let titulo = nomeParametro.get('filme')
 
 
-alert(titulo)
+
 
 
 
@@ -21,20 +21,16 @@ fetch(`http://www.omdbapi.com/?t=${titulo}&apikey=f450f23a`, options)
 
                 document.querySelector('#tituloinicial').innerHTML = `${titulo}`
                 document.querySelector('#h3').innerHTML = `${data.Title}`
-<<<<<<< HEAD
                 let item = document.getElementById('div2')
-                item.innerHTML= `<img src="${data.Poster}">`
                 // document.querySelector('#div2').innerHTML = 
-=======
-                document.querySelector('#imagem').innerHTML =`<img src ="${data.Poster}">`
->>>>>>> e62130b926314f177a061d550db57ec512a7c399
+
+                document.querySelector('#imagem').innerHTML =`<img src ="${data.Poster}" id="poster">`
                 document.querySelector('#ANO').innerHTML = `${data.Year}`
                 document.querySelector('#nota').innerHTML = `${data.Metascore}`
                 document.querySelector('#sin').innerHTML = `${data.Plot}`
                 document.querySelector('#gen').innerHTML = `${data.Genre}`
                 //  var classe = document.querySelector('#classi').innerHTML= `${data.Rated}`
                 var classificação = `${data.Rated}`
-
 
                 if (classificação == 'G') {
                     document.querySelector('#classi').innerHTML = 'livre'
