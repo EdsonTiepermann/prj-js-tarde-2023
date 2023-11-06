@@ -24,12 +24,11 @@ botao.addEventListener("click", function (e) {
 
   fetch(`http://www.omdbapi.com/?s=${filme}&apikey=${apikey}`, options)
     .then(function (response) {
-      response.json()
-        .then(function (data) {
-          for (let index = 0; index < data.Search.length; index++) {
-            document.querySelector("#filmesPoster").innerHTML += `<a href="filme_especifico.html?tituloFilme=${data.Search[index].Title}"><img src="${data.Search[index].Poster}"></a>`;
-          }
-        });
+      response.json().then(function (data) {
+        for (let index = 0; index < data.Search.length; index++) {
+          document.querySelector("#filmesPoster").innerHTML += `<a href="filme_especifico.html?tituloFilme=${data.Search[index].Title}"><img src="${data.Search[index].Poster}"></a>`;
+        }
+      });
     })
     .catch(function (e) {
       console.log("Error: " + e.message);
