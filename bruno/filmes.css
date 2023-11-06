@@ -1,0 +1,68 @@
+
+.container{
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Estilos para o rótulo do campo de pesquisa */
+.form-label {
+ 
+  font-weight: bold;
+}
+
+/* Estilos para o campo de pesquisa e botão */
+.input-group {
+  margin-top: 20px;
+  
+}
+
+/* Estilos para o botão de pesquisa */
+.btn-primary {
+  background-color: #4285F4;
+  border: none;
+}
+
+/* Estilos para o botão de pesquisa ao passar o mouse (hover) */
+.btn-primary:hover {
+  background-color: #3579D8;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+#saudacao{
+  color: #3579D8;
+  padding: 1%;
+
+
+}
+
+
+/* Estilos para cada cartaz de filme */
+#filmesPoster a {
+  flex: 0 0 calc(33.33% - 10px); /* Defina a largura desejada para cada cartaz */
+  margin: 5px; /* Espaçamento entre os cartazes */
+  text-align: center;
+  text-decoration: none;
+  color: #333; /* Cor do texto */
+}
+
+#filmesPoster a img {
+  max-width: 100%; /* Garanta que a imagem do cartaz se ajuste ao contêiner */
+  height: auto;
+  border: 1px solid #ccc; /* Borda ao redor do cartaz */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 5px;
+  background-color: #fff; /* Fundo do cartaz */
+  transition: transform 0.2s; /* Efeito de transição ao passar o mouse */
+}
+
+#filmesPoster a:hover img {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
