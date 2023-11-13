@@ -13,7 +13,7 @@ botao.addEventListener('click', function (e) {
         mode: 'cors',
         cache: 'default'
     }
-
+    
     fetch(`ws/loginJson.json`, Options)
 
         .then(function (response) {

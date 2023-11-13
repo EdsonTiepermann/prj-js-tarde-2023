@@ -23,6 +23,7 @@ fetch(`http://www.omdbapi.com/?t=${infoFilmes}&apikey=eca49c5b`, Options)
           document.querySelector("#inf").innerHTML += `${data.Search[index].rtnFilmes}`
         
       });
+      
   })
 
   .catch(function (e) {
