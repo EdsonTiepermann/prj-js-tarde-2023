@@ -17,6 +17,7 @@ botao.addEventListener('click', function (e) {
         mode: 'cors',
         cache: 'default'
     }
+    
 
     fetch(`http://www.omdbapi.com/?s=${nomeFilme}&apikey=eca49c5b`, Options)
 
@@ -28,7 +29,7 @@ botao.addEventListener('click', function (e) {
                     for (let index = 0; index < data.Search.length; index++) {
                         console.log(data.Search[index])
 
-                        document.querySelector('#poster').innerHTML += `<a href="ParametroT.HTML"><img src="${data.Search[index].Poster}"></a>`
+                        document.querySelector('#poster').innerHTML += `<a href="ParametroT.HTML?nomefilme=${data.Search[index].Title}"><img src="${data.Search[index].Poster}"></a>`
 
                       
                     }
