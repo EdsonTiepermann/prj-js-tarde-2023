@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sfilmes.css">
     <title>Filmes</title>
 </head>
+
 <body>
     <h1 id="nomeTopo">SEJA BEM VINDO</h1>
-    <input position="center" placeholder="Procure um Filme!">
+    <form method="get" class="formLogin">
+        <label for="filme">Procure um Filme/Série:</label>
+        <input type="text" id="filme" placeholder="Digite o nome" required />
+        <input type="submit" id="bfilme" value="Buscar" class="btn" />
+    </form>
+
+    <div id="resultsContainer"></div>
 
     <script src="sfilmes.js"></script>
 </body>
+
 </html>
